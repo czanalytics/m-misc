@@ -13,3 +13,10 @@ log[E] = 1
 log[x_ y_] := log[x] + log[y]
 log[x_^n_] := n log[x]
 ?log (* gives the rules *)
+
+(* transformations *)
+ex = x^2 + 5 y^2 - y^4 
+ex /. y^2 -> a
+ex /. _^2 -> a
+ex /. _^_ -> a
+ex /. {{x -> a}, {y -> b}} /. a -> a^2
